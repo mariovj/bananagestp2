@@ -38,13 +38,10 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		if(loginBean.validator() == true) {
-			session.setAttribute("comprobar", "Datos correctos");
-			session.setAttribute("User", loginBean.getUser());
+			session.setAttribute("user", loginBean.getUser());
 			request.getRequestDispatcher("homeuser.jsp").forward(request, response);
 			
 		} else {
-			
-			session.setAttribute("comprobar", "Datos incorrectos");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 	}

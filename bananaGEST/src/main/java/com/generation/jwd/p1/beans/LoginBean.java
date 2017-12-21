@@ -57,7 +57,8 @@ public class LoginBean  implements Serializable {
 		
 		for (UserBean usuario : users) {
 			if (user.equals(usuario.getEmail()) && password.equals(usuario.getPassword())){
-				bool = true;		
+				bool = true;
+				
 			} 
 		}		
 		
