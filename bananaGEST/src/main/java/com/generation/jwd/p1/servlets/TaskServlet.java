@@ -35,6 +35,7 @@ public class TaskServlet extends HttpServlet {
 	     task.setResponsable(request.getParameter("responsable"));
 	     task.setPriority(request.getParameter("priority"));
 	     task.setUrlFile(request.getParameter("urlFile"));
+	     task.setStatus(request.getParameter("status"));
 	        
 	     HttpSession session_name= (HttpSession)request.getSession();
 	        

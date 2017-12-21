@@ -60,7 +60,7 @@
                                 Fecha de inicio / Fecha de fin
                             </th>
                             <th class="contenttable">
-                                <input id="dateform" type="date" name="date" required="true"/>
+                                <input id="dateform" type="date" name="dateStart" required="true"/>
                                  hasta 
                                 <input id="dateform" type="date" name="dateFinish" required="true"/> 
                             </th>

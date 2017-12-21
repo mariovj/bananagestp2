@@ -22,7 +22,7 @@ public class TaskBean implements Serializable {
 	
 	public TaskBean(String nameTask, String description, String dateStart, 
 					String dateFinish, String notes, String responsable, 
-					String priority, String urlFile, String status) {
+					String priority, String status) {
 		
 		this.nameTask = nameTask;
 		this.description = description;
@@ -31,7 +31,6 @@ public class TaskBean implements Serializable {
 		this.notes = notes;
 		this.responsable = responsable;
 		this.priority = priority;
-		this.urlFile = urlFile;
 		this.status = status;
 	}
 	
@@ -107,6 +106,21 @@ public class TaskBean implements Serializable {
 		return status;
 	}
 	public boolean validate () {
-		return this.nameTask.equals("Task");
+	
+			boolean bool = false;
+		
+				if (this.nameTask != null &&
+						this.dateFinish != null &&
+						this.dateStart != null &&
+						this.description != null && 
+						this.notes != null &&
+						this.priority != null &&
+						this.responsable != null  &&
+						this.status != null
+						) {
+				
+						bool = true;		
+			}
+				return bool;
 	}
 }

@@ -17,8 +17,8 @@ public class ReadAndWriteServlet {
 		UserBean userBorja = new UserBean("Borja", "Perez","borja@gmail.es");
 		UserBean UserMario = new UserBean("Mario", "Sanchez","mario@gmail.es");
 		
-		TaskBean taskBorja = new TaskBean("Informe de contabilidad", "default", "default", "default", "default", "default", "default", "default", "default");
-		TaskBean taskMario = new TaskBean("Estudio de mercado", "default", "default", "default", "default", "default", "default", "default", "default");
+//		TaskBean taskBorja = new TaskBean("Informe de contabilidad", "default", "default", "default", "default", "default", "default", "default", "default");
+//		TaskBean taskMario = new TaskBean("Estudio de mercado", "default", "default", "default", "default", "default", "default", "default", "default");
 		
 		
 ////////////Write objects to file////////////
@@ -30,8 +30,8 @@ public class ReadAndWriteServlet {
 			writeObject.writeObject(userBorja);
 			writeObject.writeObject(UserMario);
 			
-			writeObject.writeObject(taskBorja);
-			writeObject.writeObject(taskMario);
+//			writeObject.writeObject(taskBorja);
+//			writeObject.writeObject(taskMario);
 			
 			System.out.println("< The object has been saved correctly >");
 			System.out.println("");
