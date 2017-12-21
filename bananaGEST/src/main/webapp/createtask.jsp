@@ -6,7 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Crear tarea | Banana GEST</title>
-        <link rel="stylesheet" type="text/css" href="createtask.css">
+        <link rel="stylesheet" type="text/css" href="css/createtask.css">
     </head>
     <body>
         <header>
