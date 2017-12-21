@@ -34,8 +34,6 @@ public class LoginServlet extends HttpServlet {
 		LoginBean loginBean = new LoginBean();
 		loginBean.setUser(request.getParameter("user"));
 		loginBean.setPassword(request.getParameter("password"));
-//		UserBean user1 = new UserBean ();
-//		request.setAttribute("loginBean", loginBean);
 		
 		HttpSession session = request.getSession();
 
@@ -43,7 +41,9 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("comprobar", "Datos correctos");
 			session.setAttribute("User", loginBean.getUser());
 			request.getRequestDispatcher("homeuser.jsp").forward(request, response);
+			
 		} else {
+			
 			session.setAttribute("comprobar", "Datos incorrectos");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}

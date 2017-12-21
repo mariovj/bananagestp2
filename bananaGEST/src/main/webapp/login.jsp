@@ -25,7 +25,7 @@
 						<p id="error"></p>
 						<div class="intro_user">
 							<img class="alinear" src="images/user.png"/>
-							<input type="text" name="user" placeholder="User" maxlength="8" required="true" autofocus/>
+							<input type="text" name="user" placeholder="User" required="true" autofocus/>
 						</div>
 						<div class="intro_user">
 							<img class="alinear" src="images/lock.png"/>

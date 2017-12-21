@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 public class LoginBean  implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private String user;
 	private String password;
@@ -14,18 +11,33 @@ public class LoginBean  implements Serializable {
 	public LoginBean() {	
 	}
 	
-//	UserBean user1 = new UserBean(
-//			"user1",
-//			"12345"
-//			);
-//	
-//	UserBean user2 = new UserBean(
-//			"user2",
-//			"32155"
-//			);
-//	
-//	UserBean[] users = {user1, user2};
-//	
+	UserBean Mario = new UserBean(
+			"muvalera",
+			"12345"
+			);
+	
+	UserBean Claudia = new UserBean(
+			"claudiamas",
+			"56789"
+			);
+	
+	UserBean Daniel = new UserBean(
+			"danilozano",
+			"01010"
+			);
+	
+	UserBean Borja = new UserBean(
+			"borjaherranz",
+			"11111"
+			);
+	
+	UserBean Enrique = new UserBean(
+			"enriqueruiz",
+			"99999"
+			);
+	
+	UserBean[] users = {Mario, Claudia, Daniel, Borja, Enrique};
+	
 	public String getUser() {
 		return user;
 	}
@@ -40,6 +52,21 @@ public class LoginBean  implements Serializable {
 	}
 	
 	public boolean validator() {
-		return this.password.equals("admin") && this.user.equals("admin");
-	}	
+		
+		boolean bool = false;
+		
+		for (UserBean usuario : users) {
+			if (user.equals(usuario.getEmail()) && password.equals(usuario.getPassword())){
+				bool = true;		
+			} 
+		}		
+		
+		return bool;
+	}
+			
 }
+	
+		
+
+
+

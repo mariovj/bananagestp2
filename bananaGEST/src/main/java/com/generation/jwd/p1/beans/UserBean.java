@@ -10,19 +10,19 @@ public class UserBean implements Serializable {
 	private String surname;
 	private String email;
 	private String password;
+	
+	public UserBean() {
+	}
 
 	public UserBean(String name, String surname, String email){
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
-	};
+	}
 	
-	public UserBean( String email, String password) {
-		this.password = password;
+	public UserBean(String email, String password) {
 		this.email = email;
-	};
-		
-	public UserBean() {
+		this.password = password;		
 	}	
 	
 	public String getName() {
