@@ -16,6 +16,7 @@ public class LoginBeanTest {
 		assertEquals(b1.getEmail(),resultado);
 	}
 	
+	
 //	@Test
 //	public void testValidatorLogin2() {
 //		UserBean fer = new UserBean();
