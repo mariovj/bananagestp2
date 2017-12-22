@@ -60,7 +60,6 @@ public class LoginBean  implements Serializable {
 				bool = true;		
 			} 
 		}		
-		
 		return bool;
 	}
 			
