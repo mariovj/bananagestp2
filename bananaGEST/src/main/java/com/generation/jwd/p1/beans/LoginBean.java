@@ -2,6 +2,8 @@ package com.generation.jwd.p1.beans;
 
 import java.io.Serializable;
 
+
+//Holi
 public class LoginBean  implements Serializable {
 
 	private static final long serialVersionUID = 1L;
