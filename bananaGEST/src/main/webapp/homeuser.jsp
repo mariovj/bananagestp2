@@ -1,6 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -8,11 +8,11 @@
 		<title>Document</title>
 		<link rel="stylesheet" type="text/css" href="css/homeuser.css">
 	</head>
-	<body method="get" action= "/homeuser">
+	<body>
 		<header>
-			<div class="head"><img src="images/profile.png" width="55" height="55"><h3>Bienvenido/a ${User}</h3>
+			<div class="head"><img src="images/profile.png" width="55" height="55"><h3>Bienvenido/a ${user}</h3>
             <a href="#">Editar perfil</a></div>
-            <div class="head"><h1>Banana GEST</h1><a href="home_usuario.html"><img src="images/bananas_medio.png"/></a></div>
+            <div class="head"><h1>Banana GEST</h1><a href="homeuser.jsp"><img src="images/bananas_medio.png"/></a></div>
             <div class="head"><h4><a href="login.jsp">Logout</a></h4></div>    
 		</header>
 		<main>
