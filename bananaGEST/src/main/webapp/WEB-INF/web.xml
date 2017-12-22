@@ -27,6 +27,12 @@
   	<display-name>ReadAndWriteServlet</display-name>
   	<description></description>
   	<servlet-class>com.generation.jwd.p1.servlets.ReadAndWriteServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<display-name>LogoutServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.generation.jwd.p1.servlets.LogoutServlet</servlet-class>
   </servlet> 
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
@@ -43,5 +49,9 @@
   <servlet-mapping>
   	<servlet-name>ReadAndWriteServlet</servlet-name>
   	<url-pattern>/ReadAndWriteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping> 
 </web-app>
