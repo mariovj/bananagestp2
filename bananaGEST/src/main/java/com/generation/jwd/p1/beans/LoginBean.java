@@ -65,6 +65,11 @@ public class LoginBean  implements Serializable {
 		}		
 		return bool;
 	}
+
+	public boolean validator() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 			
 }
 	
