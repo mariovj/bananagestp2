@@ -39,83 +39,13 @@ public class LoginBeanTest {
 
 	@Test
 	public void testValidatorWithEmailBorjaReturnCorrectData() {
-		
-		String name = Borja.getEmail();
-		String result = "borjaherranz";
-		assertEquals(name,result);
+		LoginBean borja = new LoginBean();
+//		Boolean resultadoreal = borja.validator("borjaherranz", "11111");
+//		Boolean resultadoesperado = true;
+		assertTrue(borja.validator("borjaherranz", "11111"));
 	}
 	
-	@Test
-	public void testValidatorWithEmailMarioReturnCorrectData() {
-		
-		String name = Mario.getEmail();
-		String result = "muvalera";
-		assertEquals(name,result);
-	}
-
-	@Test
-	public void testValidatorWithEmailClaudiaReturnCorrectData() {
-		
-		String name = Claudia.getEmail();
-		String result = "claudiamas";
-		assertEquals(name,result);
-	}
-
-	@Test
-	public void testValidatorWithEmailDanielReturnCorrectData() {
-		
-		String name = Daniel.getEmail();
-		String result = "danilozano";
-		assertEquals(name,result);
-	}
-
-	@Test
-	public void testValidatorWithEmailEnriqueReturnCorrectData() {
-		
-		String name = Enrique.getEmail();
-		String result = "enriqueruiz";
-		assertEquals(name,result);
-	}
 	
-	@Test
-	public void testValidatorWithPassBorjaReturnCorrectData() {
-		
-		String name = Borja.getPassword();
-		String result = "11111";
-		assertEquals(name,result);
-	}
-	
-	@Test
-	public void testValidatorWithPassMarioReturnCorrectData() {
-		
-		String name = Mario.getPassword();
-		String result = "12345";
-		assertEquals(name,result);
-	}
-	
-	@Test
-	public void testValidatorWithPassClaudiaReturnCorrectData() {
-		
-		String name = Claudia.getPassword();
-		String result = "56789";
-		assertEquals(name,result);
-	}
-	
-	@Test
-	public void testValidatorWithPassDanielReturnCorrectData() {
-		
-		String name = Daniel.getPassword();
-		String result = "01010";
-		assertEquals(name,result);
-	}
-	
-	@Test
-	public void testValidatorWithPassEnriqueReturnCorrectData() {
-		
-		String name = Enrique.getPassword();
-		String result = "99999";
-		assertEquals(name,result);
-	}
 }
 
 

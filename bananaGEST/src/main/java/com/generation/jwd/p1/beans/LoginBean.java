@@ -54,7 +54,7 @@ public class LoginBean  implements Serializable {
 		this.password = password;
 	}
 	
-	public boolean validator() {
+	public boolean validator(String user, String password) {
 		
 		boolean bool = false;
 		
