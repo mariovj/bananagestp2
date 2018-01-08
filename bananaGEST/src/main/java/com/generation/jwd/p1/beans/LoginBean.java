@@ -28,7 +28,7 @@ public class LoginBean  implements Serializable {
 	
 	UserBean Borja = new UserBean(
 			"borjaherranz",
-			"11112"
+			"11111"
 			);
 	
 	UserBean Enrique = new UserBean(
