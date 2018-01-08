@@ -1,7 +1,7 @@
 package com.generation.jwd.p1.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.generation.jwd.p1.beans.LoginBean;
-import com.generation.jwd.p1.beans.UserBean;
+
 
 
 @WebServlet("/login")

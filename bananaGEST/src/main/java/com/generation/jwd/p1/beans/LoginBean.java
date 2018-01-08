@@ -28,7 +28,7 @@ public class LoginBean  implements Serializable {
 	
 	UserBean Borja = new UserBean(
 			"borjaherranz",
-			"11111"
+			"11112"
 			);
 	
 	UserBean Enrique = new UserBean(
@@ -54,7 +54,7 @@ public class LoginBean  implements Serializable {
 		this.password = password;
 	}
 	
-	public boolean validator(String user, String password) {
+	public boolean validator() {
 		
 		boolean bool = false;
 		
@@ -64,13 +64,7 @@ public class LoginBean  implements Serializable {
 			} 
 		}		
 		return bool;
-	}
-
-	public boolean validator() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-			
+	}			
 }
 	
 		
