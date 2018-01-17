@@ -5,4 +5,5 @@ public class PruebaMario {
 			public String Pepe;
 			public String Mario;
 			public String bailaor;
+			public String claudia;
 }
