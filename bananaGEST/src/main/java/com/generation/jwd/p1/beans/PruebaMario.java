@@ -4,4 +4,5 @@ public class PruebaMario {
 			public int tiem;
 			public String Pepe;
 			public String Mario;
+			public String bailaor;
 }
