@@ -6,4 +6,5 @@ public class PruebaMario {
 			public String Mario;
 			public String bailaor;
 			public String claudia;
+			public String Fer;
 }
