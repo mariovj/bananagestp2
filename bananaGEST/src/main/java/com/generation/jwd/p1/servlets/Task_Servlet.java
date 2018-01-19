@@ -13,7 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/homeuser")
+@WebServlet("/createtask")
+
 public class Task_Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -30,7 +31,7 @@ public class Task_Servlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.getRequestDispatcher("createtask.jsp").forward(request, response);
 	}
 
 	/**
@@ -78,30 +79,6 @@ public class Task_Servlet extends HttpServlet {
         	}
        
             System.out.println("Conexion exitosa3");
-//            Timestamp fechaInicio = Date.valueOf("2018-02-16 00:00:00.00000000");
-//            Timestamp fechaFin = Date.valueOf("2018-02-19 00:00:00.00000000");
-//            System.out.println("Conexion exitosa4");
-//            stmt.setInt(1,102);
-//            stmt.setString(2,"mi descripcion2");
-//            stmt.setString(3,"mi responsable2");
-//            stmt.setInt(4,24);
-//            stmt.setTimestamp(5, fechaInicio);
-//            System.out.println("Conexion exitosa5");
-//            stmt.setTimestamp(6, fechaFin);
-//            System.out.println("Conexion exitosa6");
-//            stmt.executeUpdate();
-//            System.out.println("Conexion exitosa7");
-//            System.out.println("Se ha pasado por el segundo statement");
-//            connection.commit();
-//            System.out.println("Statements commiteados");
-//            
-//            if (rs.next()) {
-//                System.out.println("No records found");
-//            } else {
-//                while(rs.next(){
-
-//
-//            }
            
             stmt.close();
             connection.close();
