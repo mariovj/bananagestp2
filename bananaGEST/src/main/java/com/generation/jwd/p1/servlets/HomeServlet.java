@@ -51,6 +51,7 @@ public class HomeServlet extends HttpServlet {
 //            System.out.println("Conexion exitosa2");
         	stmt = connection.createStatement();
         	rs = stmt.executeQuery("SELECT * FROM tasks");
+//        	HAY QUE METER EL SET
         	 String idtasks =request.getParameter("idtasks");
         	 String nombretarea =request.getParameter("nombretarea");
         	 String descripcion =request.getParameter("descripcion");

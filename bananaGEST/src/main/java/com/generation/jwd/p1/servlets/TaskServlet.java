@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import com.generation.jwd.p1.beans.*;
 
 
-@WebServlet("/createtask")
+@WebServlet("/holi")
 public class TaskServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
