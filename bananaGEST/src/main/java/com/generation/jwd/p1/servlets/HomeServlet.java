@@ -6,6 +6,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+
 import com.generation.jwd.p1.beans.TaskBean;
 
 import javax.servlet.RequestDispatcher;
@@ -39,14 +41,14 @@ public class HomeServlet extends HttpServlet {
         Connection connection = null;
         Statement stmt = null;
         ResultSet rs = null;
-        String tarea []= new String [0];
+        ArrayList tarea = new ArrayList ();
         String db_user = "root";
         String db_pass = "Admin123.";
 //        ArrayList<Task> taskList = new ArrayList<Task>();
         
         try {
-	        connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/bananaGESTp2",db_user,db_pass);
-	        System.out.println("Conexion exitosa");
+	        connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/bananagestp2",db_user,db_pass);
+	        System.out.println("########### Conexion exitosa ################");
 //            connection.setAutoCommit(false);
 //            System.out.println("Conexion exitosa2");
         	stmt = connection.createStatement();
@@ -62,18 +64,18 @@ public class HomeServlet extends HttpServlet {
 //        	 TaskBean task = new TaskBean (idtasks, nombretarea, descripcion, responsable, fechainicio, fechafin);
         	 
         	 HttpSession session = request.getSession();
-        	while(rs.next()) {
-        		tarea [0] = rs.getString(1);
-        		tarea [1] = rs.getString(2);
-        		tarea [2] = rs.getString(3);
-        		tarea [3] = rs.getString(4);
-        		tarea [4] = rs.getString(5);
-        		tarea [5] = rs.getString(6);
+        	
+        	 while(rs.next()) {
+        		 System.out.println("############ estamos en el while ##############3");
+        		int size = tarea.size();
+        		for (int x= 0; x<tarea.size();x++) {
+        			System.out.println(tarea.get(x));
+        		}
         		
         		System.out.println(rs.getString(2));
         	}
        
-            System.out.println("Conexion exitosa3");
+            System.out.println(" ############ Conexion exitosa3 ########");
            
             stmt.close();
             connection.close();
