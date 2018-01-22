@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 
 import com.generation.jwd.p1.beans.LoginBean;
 
-@WebServlet("/login")
+@WebServlet("/logina")
 public class Prueba extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

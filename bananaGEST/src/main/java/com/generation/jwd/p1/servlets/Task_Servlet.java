@@ -78,17 +78,19 @@ public class Task_Servlet extends HttpServlet {
             stmt = (PreparedStatement)conn.prepareStatement
             		("INSERT INTO tasks VALUES (?,?,?,?,?,?)");
             		  stmt.setInt(1, 001);
-            		  stmt.setString(2, "Mario");
-            		  stmt.setString(3, "My first task");
-            		  stmt.setString(4, "Claudia");
+            		  stmt.setString(2, "My firs task");
+            		  stmt.setString(3, "Description");
+            		  stmt.setInt(4, 1);
            		      stmt.setDate(5, java.sql.Date.valueOf("2017/03/03 20:18:23"));
 //            		  stmt.setDate(6, "2017/04/03");
-            		 
-            		  DateFormat dateFormatYMD = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-            	      Date now = new Date();
-            	      String vDateYMD = dateFormatYMD.format(now);
-//            	      String vDateMDYSQL =  vDateYMD;
-//            	      Date date = new Date(0000-00-00);
+            String idresponsable = "responsable";
+            int id_int = Integer.parseInt(idresponsable);
+            
+            DateFormat dateFormatYMD = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Date now = new Date();
+            String vDateYMD = dateFormatYMD.format(now);
+//          String vDateMDYSQL =  vDateYMD;
+//          Date date = new Date(0000-00-00);
         	
         	while(rs.next()) {
 //        	 	System.out.println("idtasks=" + rs.getString("idtask") +
