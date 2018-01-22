@@ -41,7 +41,7 @@ public class HomeServlet extends HttpServlet {
         ResultSet rs = null;
         String tarea []= new String [0];
         String db_user = "root";
-        String db_pass = "asteroideb612";
+        String db_pass = "Admin123.";
 //        ArrayList<Task> taskList = new ArrayList<Task>();
         
         try {

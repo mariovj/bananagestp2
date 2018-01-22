@@ -26,7 +26,7 @@ public class SelectTaskConnection {
 		        ResultSet rs = null;
 		        String tarea []= new String [5];
 		        String db_user = "root";
-		        String db_pass = "asteroideb612";
+		        String db_pass = "Admin123.";
 //		        ArrayList<Task> taskList = new ArrayList<Task>();
 		        
 		        try {
@@ -50,6 +50,7 @@ public class SelectTaskConnection {
 //		        	 			"fechainicio" + rs.getString("fechainicio") +
 //		        	 			"fechafin" + rs.getString("fechafin"));
 		        		System.out.println(rs.getString(2));
+		        		System.out.println(rs.getString(3));
 		        	}
 		       
 		            System.out.println("Conexion exitosa3");

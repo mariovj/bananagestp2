@@ -60,7 +60,7 @@ public class Task_Servlet extends HttpServlet {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         String db_user = "root";
-        String db_pass = "mnr1988";
+        String db_pass = "Admin123.";
 //        ArrayList<Task> taskList = new ArrayList<Task>();
         
         try {
@@ -76,7 +76,7 @@ public class Task_Servlet extends HttpServlet {
             DataSource ds = (DataSource) envContext.lookup("jdbc/bananagestp2");
             Connection conn = (Connection) ds.getConnection();
             stmt = (PreparedStatement)conn.prepareStatement
-            		("INSERT INTO tasks VALUES (?,?, ?,?,?,?)");
+            		("INSERT INTO tasks VALUES (?,?,?,?,?,?)");
             		  stmt.setInt(1, 001);
             		  stmt.setString(2, "Mario");
             		  stmt.setString(3, "My first task");
@@ -128,10 +128,9 @@ public class Task_Servlet extends HttpServlet {
         		System.out.println("statement not found");
         	}
         	}
-        }
-
-		
-		}
+       }
+	
+}
 		
 
 

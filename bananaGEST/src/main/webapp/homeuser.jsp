@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -46,32 +45,16 @@
 					<input type="text" name="navegador" placeholder="Search"/>
 					<p>
 						<table id="tabla" border="3" cellspacing="0" cellpadding="2" bordercolor="#666633"/>
-							<tr>
-								<td>
-									<a href="#">Tarea 1</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="#">Tarea 2</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="#">Tarea 3</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="#">Tarea 4</a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="#">Tarea 5</a>
-								</td>
-							</tr>	
-							
+							<c:forEach items="${tarea}" var="task">
+                            	<tr>
+                                	<td>${tarea.idtasks}</td>
+                                	<td>${tarea.nombretarea}</td>
+                                	<td>${tarea.descripcion}</td>
+                                	<td>${tarea.responsable}</td>
+                                	<td>${tarea.fechainicio}</td>
+                                	<td>${tarea.fechafin}</td>
+                            	</tr>            
+		 					</c:forEach>	
 						</table>
 					</p>
 				</nav>	
