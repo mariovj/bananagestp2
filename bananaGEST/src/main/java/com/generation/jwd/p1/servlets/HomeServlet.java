@@ -54,6 +54,7 @@ public class HomeServlet extends HttpServlet {
         	HttpSession session = request.getSession();
         	
         	while(rs.next()) {
+        		
         		TaskBean taskbean = new TaskBean (rs.getInt(1),rs.getString(2), 
         										  rs.getString(3), rs.getInt(4),
         										  rs.getDate(5),rs.getDate(6));
@@ -70,6 +71,7 @@ public class HomeServlet extends HttpServlet {
 	        		 taskbean.setresponsable(rs.getInt(4));
 	        		 taskbean.setfechainicio(rs.getDate(5));
 	        		 taskbean.setfechafin(rs.getDate(6));	
+	        		 
         	
         		System.out.println((rs.getString(3)));
         		
@@ -78,6 +80,7 @@ public class HomeServlet extends HttpServlet {
         		 
         		System.out.println(" ############ Conexion exitosa3 ########");
         	 	}
+        	
         	
         	rs.close();
         	stmt.close();

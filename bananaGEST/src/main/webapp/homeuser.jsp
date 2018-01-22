@@ -47,12 +47,12 @@
 						<table id="tabla" border="3" cellspacing="0" cellpadding="2" bordercolor="#666633"/>
 							<c:forEach items="${taskbean}" var="task">
                             	<tr>
-                                	<td>${task.idtasks}</td>
-                                	<td>${task.nombretarea}</td>
-                                	<td>${task.descripcion}</td>
-                                	<td>${task.responsable}</td>
-                                	<td>${task.fechainicio}</td>
-                                	<td>${task.fechafin}</td>
+                                	<td>${taskbean.idtasks}</td>
+                                	<td>${taskbean.nombretarea}</td>
+                                	<td>${taskbean.descripcion}</td>
+                                	<td>${taskbean.responsable}</td>
+                                	<td>${taskbean.fechainicio}</td>
+                                	<td>${taskbean.fechafin}</td>
                             	</tr>            
 		 					</c:forEach>	
 						</table>
