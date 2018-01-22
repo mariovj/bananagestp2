@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import com.generation.jwd.p1.beans.TaskBean2;
+import com.generation.jwd.p1.beans.TaskBean;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -52,22 +52,22 @@ public class HomeServlet extends HttpServlet {
         	stmt = connection.createStatement();
         	rs = stmt.executeQuery("SELECT * FROM tasks");
 //        	HAY QUE METER EL SET
-        	 String idtasks =request.getParameter("idtasks");
-        	 String nombretarea =request.getParameter("nombretarea");
-        	 String descripcion =request.getParameter("descripcion");
-        	 String responsable =request.getParameter("responsable");
-        	 String fechainicio =request.getParameter("fechainicio");
-        	 String fechafin =request.getParameter("fechafin");
-        	 
-        	 TaskBean2 task = new TaskBean2 (idtasks, nombretarea, descripcion, responsable, fechainicio, fechafin);
+//        	 String idtasks =request.getParameter("idtasks");
+//        	 String nombretarea =request.getParameter("nombretarea");
+//        	 String descripcion =request.getParameter("descripcion");
+//        	 String responsable =request.getParameter("responsable");
+//        	 String fechainicio =request.getParameter("fechainicio");
+//        	 String fechafin =request.getParameter("fechafin");
+//        	 
+//        	 TaskBean task = new TaskBean (idtasks, nombretarea, descripcion, responsable, fechainicio, fechafin);
         	 
         	 HttpSession session = request.getSession();
         	while(rs.next()) {
-        		tarea [0]= rs.getString(1);
-        		tarea [1]= rs.getString(2);
-        		tarea [2]= rs.getString(3);
-        		tarea [3]= rs.getString(4);
-        		tarea [4]= rs.getString(5);
+        		tarea [0] = rs.getString(1);
+        		tarea [1] = rs.getString(2);
+        		tarea [2] = rs.getString(3);
+        		tarea [3] = rs.getString(4);
+        		tarea [4] = rs.getString(5);
         		tarea [5] = rs.getString(6);
         		
         		System.out.println(rs.getString(2));
