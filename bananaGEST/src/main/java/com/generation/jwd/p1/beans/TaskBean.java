@@ -9,13 +9,13 @@ public class TaskBean implements Serializable{
 	private int idtasks;
 	private String nombretarea;
 	private String descripcion;
-	private String responsable;
+	private int responsable;
 	private Date fechainicio;
 	private Date fechafin;
 	
 	public TaskBean() {};
 	
-	public TaskBean(int idtasks, String nombretarea, String descripcion, String responsable, 
+	public TaskBean(int idtasks, String nombretarea, String descripcion, int responsable, 
 			Date fechainicio, Date fechafin) {
 		
 		this.idtasks = idtasks;
@@ -61,11 +61,11 @@ public class TaskBean implements Serializable{
 		this.descripcion = descripcion;
 	}
 
-	public String getresponsable() {
+	public int getresponsable() {
 		return responsable;
 	}
 
-	public void setresponsable(String responsable) {
+	public void setresponsable(int responsable) {
 		this.responsable = responsable;
 	}
 

@@ -44,53 +44,56 @@ public class HomeServlet extends HttpServlet {
         ArrayList tarea = new ArrayList ();
         String db_user = "root";
         String db_pass = "Admin123.";
-//        ArrayList<Task> taskList = new ArrayList<Task>();
         
         try {
 	        connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/bananagestp2",db_user,db_pass);
-	        System.out.println("########### Conexion exitosa ################");
-//            connection.setAutoCommit(false);
-//            System.out.println("Conexion exitosa2");
+	        	System.out.println("########### Conexion exitosa ################");
         	stmt = connection.createStatement();
         	rs = stmt.executeQuery("SELECT * FROM tasks");
-//        	HAY QUE METER EL SET
-//        	 String idtasks =request.getParameter("idtasks");
-//        	 String nombretarea =request.getParameter("nombretarea");
-//        	 String descripcion =request.getParameter("descripcion");
-//        	 String responsable =request.getParameter("responsable");
-//        	 String fechainicio =request.getParameter("fechainicio");
-//        	 String fechafin =request.getParameter("fechafin");
-//        	 
-//        	 TaskBean task = new TaskBean (idtasks, nombretarea, descripcion, responsable, fechainicio, fechafin);
-        	 
-        	 HttpSession session = request.getSession();
+   	 
+        	HttpSession session = request.getSession();
         	
-        	 while(rs.next()) {
-        		 System.out.println("############ estamos en el while ##############3");
-        		int size = tarea.size();
-        		for (int x= 0; x<tarea.size();x++) {
-        			System.out.println(tarea.get(x));
-        		}
+        	while(rs.next()) {
+        		TaskBean taskbean = new TaskBean (rs.getInt(1),rs.getString(2), 
+        										  rs.getString(3), rs.getInt(4),
+        										  rs.getDate(5),rs.getDate(6));
         		
-        		System.out.println(rs.getString(2));
-        	}
-       
-            System.out.println(" ############ Conexion exitosa3 ########");
-           
-            stmt.close();
-            connection.close();
-            request.getRequestDispatcher("homeuser.jsp").forward(request, response);
-        } catch (SQLException e) {
+        		 System.out.println("############ estamos en el while ##############");
+        		
+//        		 for(int x = 0; x < tarea.size() ; x++) {
+//        			 int size = tarea.size();
+//        			 if(taskbean != null) {
+        		 
+	        		 taskbean.setidtasks(rs.getInt(1));
+	        		 taskbean.setnombretarea(rs.getString(2));
+	        		 taskbean.setdescripcion(rs.getString(3));
+	        		 taskbean.setresponsable(rs.getInt(4));
+	        		 taskbean.setfechainicio(rs.getDate(5));
+	        		 taskbean.setfechafin(rs.getDate(6));	
+        	
+        		System.out.println((rs.getString(3)));
+        		
+        		 	request.setAttribute("taskbean", taskbean);
+        		 	request.getRequestDispatcher("homeuser.jsp").forward(request, response);
+        		 
+        		System.out.println(" ############ Conexion exitosa3 ########");
+        	 	}
+        	
+        	rs.close();
+        	stmt.close();
+        	connection.close();
+        	
+       } catch (SQLException e) {
             System.out.println("Connection Failed! Check output console");
-        }
-        finally {
+        	
+       } finally {
         	if (rs !=null) {
-        	try {
-        		rs.close();
-        	} catch (SQLException sqlEx){
-        		rs = null;
-        		System.out.println("result not found");
-        	}
+        		try {
+        			rs.close();
+        		} catch (SQLException sqlEx){
+        			rs = null;
+        			System.out.println("result not found");
+        		}
         	}
         }
         
@@ -101,13 +104,6 @@ public class HomeServlet extends HttpServlet {
         		stmt = null;
         		System.out.println("statement not found");
         	}
-        	}
         }
-	
-	 
-		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		doGet(request, response);
 	}
-
 }

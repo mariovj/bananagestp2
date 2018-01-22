@@ -45,14 +45,14 @@
 					<input type="text" name="navegador" placeholder="Search"/>
 					<p>
 						<table id="tabla" border="3" cellspacing="0" cellpadding="2" bordercolor="#666633"/>
-							<c:forEach items="${tarea}" var="task">
+							<c:forEach items="${taskbean}" var="task">
                             	<tr>
-                                	<td>${tarea.idtasks}</td>
-                                	<td>${tarea.nombretarea}</td>
-                                	<td>${tarea.descripcion}</td>
-                                	<td>${tarea.responsable}</td>
-                                	<td>${tarea.fechainicio}</td>
-                                	<td>${tarea.fechafin}</td>
+                                	<td>${task.idtasks}</td>
+                                	<td>${task.nombretarea}</td>
+                                	<td>${task.descripcion}</td>
+                                	<td>${task.responsable}</td>
+                                	<td>${task.fechainicio}</td>
+                                	<td>${task.fechafin}</td>
                             	</tr>            
 		 					</c:forEach>	
 						</table>
