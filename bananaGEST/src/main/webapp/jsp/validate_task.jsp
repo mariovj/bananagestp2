@@ -1,4 +1,4 @@
-<%@ include file="header.jsp"%>
+<%@ include file="head.jsp"%>
 		<meta charset="UTF-8">
 		<title>Tarea Creada</title>
 		<link rel=stylesheet href="css/validate_task.css" type="text/css">

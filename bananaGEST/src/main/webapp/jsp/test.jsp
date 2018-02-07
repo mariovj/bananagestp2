@@ -1,4 +1,4 @@
-<%@ include file="header.jsp"%>
+<%@ include file="head.jsp"%>
 		<meta charset="UTF-8"->
 		<title>Banana Gest | Home usuario</title>
 		<link rel="stylesheet" type="text/css" href="css/user_home.css">

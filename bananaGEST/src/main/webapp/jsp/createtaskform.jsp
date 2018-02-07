@@ -1,7 +1,13 @@
-<%@ include file="header.jsp"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%-- <jsp:useBean id="#" class="#" scope="request"></jsp:useBean> --%>
+<html>
+	<head>
 		<meta charset="UTF-8">
 		<title>Banana Gest | Crear tarea</title>
-		<link rel=stylesheet href="css/create_task.css" type="text/css">
+		<link rel=stylesheet href="css/createtaskform.css" type="text/css">
 	</head>
 	<body>
 		<header>
@@ -14,22 +20,7 @@
 				</div>
             </form>	
 		</header>
-	    <!-- <p>Click the button to display the number of links in the document.</p>
-		<button onclick="myFunction()">Try it</button>
-		<div id="resultados_a"></div>
-		<script>
-		function myFunction() {
-		    var x = document.links;
-		    var text = "";
-		    for (i = 0; i< x.length; i++) {
-		        text += x[i] + "<br>";
-		    }
-		 document.getElementById("resultados_a").innerHTML = text;
-		}
-		</script> -->
-			
 		<main>
-			
 		  <section class="seccion1">
 			<form action="taskServlet" method="post">
 			<label for="titulo">Título:</label>
