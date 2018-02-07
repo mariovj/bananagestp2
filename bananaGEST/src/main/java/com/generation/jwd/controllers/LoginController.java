@@ -16,7 +16,7 @@ public class LoginController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String renderUser() {
 		
-		System.out.println("Inicio");
+		System.out.println("#########Inicio##########");
 		
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml");
@@ -26,7 +26,9 @@ public class LoginController {
 		Transaction t = session.beginTransaction();
 		
 		User user = new User();
-		
+		user.setId(6);
+		user.setEmail("prueba");
+		user.setPassword("passwordprueba");
 		
 		session.persist(user);
 		
@@ -36,6 +38,6 @@ public class LoginController {
 		
 		System.out.println("Fin");
 		
-		return "hello";
+		return "user_home";
 	}
 }

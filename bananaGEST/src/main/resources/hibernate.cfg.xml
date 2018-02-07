@@ -17,7 +17,7 @@
          root
       </property>
       <property name="hibernate.connection.password">
-         Admin123.
+         1234
       </property>
       <mapping class="com.generation.jwd.beans.User" />
    </session-factory>
