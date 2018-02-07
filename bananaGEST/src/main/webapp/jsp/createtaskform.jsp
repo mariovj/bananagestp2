@@ -22,25 +22,25 @@
 		</header>
 		<main>
 		  <section class="seccion1">
-			<form action="taskServlet" method="post">
-			<label for="titulo">Título:</label>
-			<input type="text" id="titulo" name="titulo" required><br />			
-			<label for="fecha_inicio">Fecha inicio:</label>
-			<input type="date" id="fecha_inicio" name="fecha_inicio" required><br />
-			<label for="fecha_final">Fecha final:</label>
-			<input type="date" id="fecha_final" name="fecha_final" required><br />
-			<label for="estado">Estado:</label>	
-			<select name="estado" id="estado" required>
+			<form action="task" method="post">
+			<label for="id">Id:</label>
+			<input type="int" id="Id" name="Id" required><br/> 
+			<label for="title">Título:</label>
+			<input type="text" id="title" name="title" required><br/>			
+			<label for="startdate">Fecha inicio:</label>
+			<input type="date" id="startdate" name="startdate" required><br/>
+			<label for="finishdate">Fecha fin:</label>
+			<input type="date" id="finishdate" name="finishdate" required><br/>
+			<label for="status">Estado:</label>	
+			<select name="status" id="status" required>
 				<option value="to do">to do</option>
-				<option value="on going">on going</option>
+				<option value="ongoing">ongoing</option>
 				<option value="done">done</option>
 			</select><br />
-			<!-- <label for="file">Adjuntar archivo:</label><br />
-			<input type="file" id="file" name="file"><br /> -->
-			<label for="descripcion">Descripcion:</label><br>
-			<textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea><br />
-			<label for="notas">Notas:</label><br>
-			<textarea name="notas" id="notas" cols="30" rows="5"></textarea><br />
+			<label for="description">Descripción:</label><br>
+			<textarea name="description" id="description" cols="30" rows="10"></textarea><br />
+			<label for="notes">Notas:</label><br>
+			<textarea name="notes" id="notes" cols="30" rows="5"></textarea><br />
 			<input type="submit" value="Crear">
 		   </form>	
 		  </section>
