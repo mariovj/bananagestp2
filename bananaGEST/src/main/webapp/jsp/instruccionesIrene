@@ -1,0 +1,13 @@
+3 historias de usuario bien puestas y con sus criterios de aceptación---
+*desglose de tareas--
+mockups
+diagrama de clases uml--
+con diagrama de secuencia*modela el proceso de una tarea (crear login de usuario saldrian las diferentes fases hasta crear el usuario)
+que quiero hacer para esa tarea/ mvc - bean / clase controladora - servlet(login)cuando le llege get tiene que mostrar el formulario y cuando sea post haga el login comprobar usuario y contraseña si es incorrecto mandar otra vez a login y si es correcto pongo algo en sesión para identificar que esta logado comprobar que no puedes acceder a nada si no te has identificado / vista con jsp y html
+modelos a crear usuario y tarea
+campos de tarea
+servlet home -> mostrar homeusuario 
+servlet(login)cuando le llege get tiene que mostrar el formulario y cuando sea post haga el login comprobar usuario y contraseña si es incorrecto mandar otra vez a login y si es correcto pongo algo en sesión para identificar que esta logado comprobar que no puedes acceder a nada si no te has identificado 
+servlet tarea cuando haga get nada y cuando haga post que la creey decir que modelo es
+login homeusuario y formulario crear tarea
+dos versiones la basica(todo hardcodeado) y la de nota (crear usuarios en archivo data y logout) tareas (crear y guardar en el fichero de tareas) poner dinamismo con javascript 
