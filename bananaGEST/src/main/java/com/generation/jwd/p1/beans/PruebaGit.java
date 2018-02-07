@@ -5,4 +5,5 @@ public class PruebaGit {
 	private String Claudia;
 	private String MarioNei;
 	private String Matemario;
+	private String Dani;
 }
