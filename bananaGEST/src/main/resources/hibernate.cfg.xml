@@ -11,13 +11,13 @@
          com.mysql.jdbc.Driver
       </property>
       <property name="hibernate.connection.url">
-         jdbc:mysql://127.0.0.1:3306/generation_test
+         jdbc:mysql://127.0.0.1:3306/bananagest_grupo2
       </property>
       <property name="hibernate.connection.username">
          root
       </property>
       <property name="hibernate.connection.password">
-         admin1234
+         Admin123.
       </property>
       <mapping class="com.generation.jwd.springHibernateMaven.beans.User" />
    </session-factory>
