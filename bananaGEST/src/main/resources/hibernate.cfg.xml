@@ -19,6 +19,6 @@
       <property name="hibernate.connection.password">
          Admin123.
       </property>
-      <mapping class="com.generation.jwd.springHibernateMaven.beans.User" />
+      <mapping class="com.generation.jwd.beans.User" />
    </session-factory>
 </hibernate-configuration>
