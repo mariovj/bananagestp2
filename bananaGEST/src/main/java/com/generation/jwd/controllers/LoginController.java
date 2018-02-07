@@ -26,11 +26,7 @@ public class LoginController {
 		Transaction t = session.beginTransaction();
 		
 		User user = new User();
-		user.setName("NameHibernate");
-		user.setSurname("SurnameHibernate");
-		user.setEmail("EmailHibernate");
-		user.setPassword("PasswordHibernate");
-		user.setUserImage("UserImageHibernate");
+		
 		
 		session.persist(user);
 		
